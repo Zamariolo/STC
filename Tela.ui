@@ -531,7 +531,7 @@ color: rgb(255, 255, 255);
            </property>
            <property name="icon">
             <iconset>
-             <normaloff>images/newFile_icon.png</normaloff>images/newFile_icon.png</iconset>
+             <normaloff>STC/images/newFile_icon.png</normaloff>STC/images/newFile_icon.png</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -575,7 +575,7 @@ color: rgb(255, 255, 255);
            </property>
            <property name="icon">
             <iconset>
-             <normaloff>images/openFile_icon.png</normaloff>images/openFile_icon.png</iconset>
+             <normaloff>STC/images/openFile_icon.png</normaloff>STC/images/openFile_icon.png</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -619,7 +619,7 @@ color: rgb(255, 255, 255);
            </property>
            <property name="icon">
             <iconset>
-             <normaloff>images/save_icon.png</normaloff>images/save_icon.png</iconset>
+             <normaloff>STC/images/save_icon.png</normaloff>STC/images/save_icon.png</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -666,7 +666,7 @@ color: rgb(255, 255, 255);
            </property>
            <property name="icon">
             <iconset>
-             <normaloff>images/Save-as-icon.png</normaloff>images/Save-as-icon.png</iconset>
+             <normaloff>STC/images/Save-as-icon.png</normaloff>STC/images/Save-as-icon.png</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -710,7 +710,7 @@ color: rgb(255, 255, 255);
            </property>
            <property name="icon">
             <iconset>
-             <normaloff>images/calculateIcon.png</normaloff>images/calculateIcon.png</iconset>
+             <normaloff>STC/images/calculateIcon.png</normaloff>STC/images/calculateIcon.png</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -775,7 +775,7 @@ color: rgb(255, 255, 255);
          <number>5</number>
         </property>
         <property name="currentIndex">
-         <number>4</number>
+         <number>3</number>
         </property>
         <widget class="QWidget" name="projeto_page">
          <property name="sizePolicy">
@@ -1004,7 +1004,7 @@ color: rgb(255, 255, 255);
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>93</width>
+                  <width>147</width>
                   <height>41</height>
                  </rect>
                 </property>
@@ -2936,53 +2936,6 @@ color: rgb(0, 100, 148);</string>
          </layout>
         </widget>
         <widget class="QWidget" name="trocador_page">
-         <widget class="QDoubleSpinBox" name="e_entry">
-          <property name="geometry">
-           <rect>
-            <x>235</x>
-            <y>351</y>
-            <width>269</width>
-            <height>24</height>
-           </rect>
-          </property>
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-            <horstretch>1</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>0</width>
-            <height>24</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <family>Segoe UI</family>
-            <pointsize>10</pointsize>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(0, 100, 148);</string>
-          </property>
-          <property name="frame">
-           <bool>false</bool>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-          <property name="buttonSymbols">
-           <enum>QAbstractSpinBox::NoButtons</enum>
-          </property>
-          <property name="minimum">
-           <double>-99999.000000000000000</double>
-          </property>
-          <property name="maximum">
-           <double>99999.000000000000000</double>
-          </property>
-         </widget>
          <widget class="QLabel" name="L_label">
           <property name="geometry">
            <rect>
@@ -3072,100 +3025,6 @@ color: rgb(0, 100, 148);</string>
             <string>cm</string>
            </property>
           </item>
-         </widget>
-         <widget class="QDoubleSpinBox" name="L_entry">
-          <property name="geometry">
-           <rect>
-            <x>235</x>
-            <y>420</y>
-            <width>269</width>
-            <height>24</height>
-           </rect>
-          </property>
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-            <horstretch>1</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>0</width>
-            <height>24</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <family>Segoe UI</family>
-            <pointsize>10</pointsize>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(0, 100, 148);</string>
-          </property>
-          <property name="frame">
-           <bool>false</bool>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-          <property name="buttonSymbols">
-           <enum>QAbstractSpinBox::NoButtons</enum>
-          </property>
-          <property name="minimum">
-           <double>-99999.000000000000000</double>
-          </property>
-          <property name="maximum">
-           <double>99999.000000000000000</double>
-          </property>
-         </widget>
-         <widget class="QDoubleSpinBox" name="W_entry">
-          <property name="geometry">
-           <rect>
-            <x>235</x>
-            <y>282</y>
-            <width>269</width>
-            <height>24</height>
-           </rect>
-          </property>
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-            <horstretch>1</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>269</width>
-            <height>24</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <family>Segoe UI</family>
-            <pointsize>10</pointsize>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(0, 100, 148);</string>
-          </property>
-          <property name="frame">
-           <bool>false</bool>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-          <property name="buttonSymbols">
-           <enum>QAbstractSpinBox::NoButtons</enum>
-          </property>
-          <property name="minimum">
-           <double>-99999.000000000000000</double>
-          </property>
-          <property name="maximum">
-           <double>99999.000000000000000</double>
-          </property>
          </widget>
          <widget class="QComboBox" name="L_Unit_comboBox_">
           <property name="geometry">
@@ -3321,20 +3180,27 @@ color: rgb(0, 100, 148);</string>
            </property>
           </item>
          </widget>
-         <widget class="QDoubleSpinBox" name="Np_entry">
+         <widget class="QLabel" name="dimens_label">
           <property name="geometry">
            <rect>
-            <x>235</x>
-            <y>489</y>
-            <width>269</width>
-            <height>24</height>
+            <x>510</x>
+            <y>30</y>
+            <width>197</width>
+            <height>207</height>
            </rect>
           </property>
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-            <horstretch>1</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/PlateHeatExchanger/Medidas_Trocadores_Calor.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+         <widget class="QDoubleSpinBox" name="W_entry">
+          <property name="geometry">
+           <rect>
+            <x>240</x>
+            <y>280</y>
+            <width>251</width>
+            <height>24</height>
+           </rect>
           </property>
           <property name="minimumSize">
            <size>
@@ -3352,8 +3218,43 @@ color: rgb(0, 100, 148);</string>
            <string notr="true">background-color: rgb(255, 255, 255);
 color: rgb(0, 100, 148);</string>
           </property>
-          <property name="frame">
-           <bool>false</bool>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="buttonSymbols">
+           <enum>QAbstractSpinBox::NoButtons</enum>
+          </property>
+          <property name="minimum">
+           <double>0.000000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>999999.000000000000000</double>
+          </property>
+         </widget>
+         <widget class="QDoubleSpinBox" name="e_entry">
+          <property name="geometry">
+           <rect>
+            <x>240</x>
+            <y>350</y>
+            <width>251</width>
+            <height>24</height>
+           </rect>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>24</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Segoe UI</family>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 100, 148);</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignCenter</set>
@@ -3362,23 +3263,86 @@ color: rgb(0, 100, 148);</string>
            <enum>QAbstractSpinBox::NoButtons</enum>
           </property>
           <property name="minimum">
-           <double>-99999.000000000000000</double>
+           <double>0.000000000000000</double>
           </property>
           <property name="maximum">
-           <double>99999.000000000000000</double>
+           <double>999999.000000000000000</double>
           </property>
          </widget>
-         <widget class="QLabel" name="dimens_label">
+         <widget class="QDoubleSpinBox" name="L_entry">
           <property name="geometry">
            <rect>
-            <x>510</x>
-            <y>30</y>
-            <width>197</width>
-            <height>207</height>
+            <x>240</x>
+            <y>420</y>
+            <width>251</width>
+            <height>24</height>
            </rect>
           </property>
-          <property name="text">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/PlateHeatExchanger/Medidas_Trocadores_Calor.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>24</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Segoe UI</family>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 100, 148);</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="buttonSymbols">
+           <enum>QAbstractSpinBox::NoButtons</enum>
+          </property>
+          <property name="minimum">
+           <double>0.000000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>999999.000000000000000</double>
+          </property>
+         </widget>
+         <widget class="QDoubleSpinBox" name="Np_entry">
+          <property name="geometry">
+           <rect>
+            <x>240</x>
+            <y>490</y>
+            <width>251</width>
+            <height>24</height>
+           </rect>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>24</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Segoe UI</family>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 100, 148);</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="buttonSymbols">
+           <enum>QAbstractSpinBox::NoButtons</enum>
+          </property>
+          <property name="minimum">
+           <double>0.000000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>999999.000000000000000</double>
           </property>
          </widget>
         </widget>
@@ -3774,7 +3738,7 @@ color: rgb(0, 100, 148);</string>
   <tabstop>f2VerDados_btn</tabstop>
  </tabstops>
  <resources>
-  <include location="images/images.qrc"/>
+  <include location="STC/images/images.qrc"/>
  </resources>
  <connections/>
 </ui>
