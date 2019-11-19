@@ -1735,8 +1735,8 @@ class Ui_MainWindow(object):
             self.f2Fluids_comboBox.addItems(list_fluidos)
 
             #Widgets que terao valores salvos no arquivo .stc
-            spinBoxSalvos = ['f1T1_entry', 'f1T2_entry', 'f2T1_entry', 'f2T2_entry', 'f1Cp_spinBox', 'f1Rho_spinBox', 'f1Mi_spinbox', 'f1Kf_spinbox', 'f1R_spinbox', 'f2Cp_spinBox', 'f2Rho_spinBox', 'f2Mi_spinBox', 'f2K_spinBox', 'f2R_spinBox', 'f1Flow_entry', 'f2Flow_entry']
-            comboBoxSalvos = ['f1T1Unit_comboBox','f2T1Unit_comboBox', 'f1FlowUnit_comboBox', 'f1Fluids_combobox', 'f2FlowUnit_comboBox', 'f2Fluids_comboBox']
+            spinBoxSalvos = ['f1T1_entry', 'f1T2_entry', 'f2T1_entry', 'f2T2_entry', 'f1Cp_spinBox', 'f1Rho_spinBox', 'f1Mi_spinbox', 'f1Kf_spinbox', 'f1R_spinbox', 'f2Cp_spinBox', 'f2Rho_spinBox', 'f2Mi_spinBox', 'f2K_spinBox', 'f2R_spinBox', 'f1Flow_entry', 'f2Flow_entry', 'W_entry', 'e_entry', 'L_entry', 'Np_entry', 'deq_spinBox', 'ap_spinbox', 'h_spinbox', 'A_spinbox', 'Np_spinbox', 'Q_spinbox', 'dtln_spinbox']
+            comboBoxSalvos = ['f1T1Unit_comboBox','f2T1Unit_comboBox', 'f1FlowUnit_comboBox', 'f1Fluids_combobox', 'f2FlowUnit_comboBox', 'f2Fluids_comboBox', 'W_Unit_comboBox', 'e_Unit_comboBox', 'L_Unit_comboBox_']
             #Nome do projeto
             self.nomeProjeto = "UmNomeQueNinguemNuncaVaiEscolher"
 
