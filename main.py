@@ -1811,7 +1811,12 @@ class Ui_MainWindow(object):
             self.f2Tm_label.setText("")
             #Tela inicial correta e desativando botoes
             self.trocaTela('projetoTela')
-
+            #Travar botoes laterais (deve-se comecar pela tela projeto)
+            self.fluido1_btn.setEnabled(False)
+            self.fluido2_btn.setEnabled(False)
+            self.trocador_btn.setEnabled(False)
+            self.resultados_btn.setEnabled(False)
+            
 
             #######################################################################
             ############### GATILHOS PRAS FUNÇÕES #################################
@@ -1842,7 +1847,9 @@ class Ui_MainWindow(object):
             self.saveFile_btn.clicked.connect(partial(self.salvarProjeto, spinBox=spinBoxSalvos, comboBox=comboBoxSalvos, funcao="salvar"))
             self.saveAsFile_btn.clicked.connect(partial(self.salvarProjeto, spinBox=spinBoxSalvos, comboBox=comboBoxSalvos, funcao="salvarComo"))
             self.openFile_btn.clicked.connect(partial(self.abrirProjeto))
-            self.newFile_btn.clicked.connect(partial(self.novoProjeto, spinBoxSalvos=spinBoxSalvos, comboBoxSalvos=comboBoxSalvos))
+            self.newFile_btn.clicked.connect(partial(self.novoProjeto, spinBoxSalvos=spinBoxSalvos, comboBoxSalvos=comboBoxSalvos, origem=''))
+            self.mainNewFile_btn.clicked.connect(partial(self.novoProjeto, spinBoxSalvos=spinBoxSalvos, comboBoxSalvos=comboBoxSalvos, origem='projetoTela'))
+
 
             #botao ver resultados
             self.calculate_btn.clicked.connect(partial(self.mostrar_resultados,resultado=str('calculo')))
@@ -1968,7 +1975,6 @@ class Ui_MainWindow(object):
                 self.f2Warning_label.hide()
                 self.f2Tm_label.setText("Fluido avaliado em %.2f %s" %(tm, Tunidade))
 
-
     def atualizaTituloPrograma(self, nomeArquivo):
             #Obter somente o nome do projeto e nao do diretorio
 
@@ -2079,10 +2085,17 @@ class Ui_MainWindow(object):
                         print("Aparentemente um erro ocorreu ao encontrar o fluido")
                         widget.setCurrentIndex(0)
 
-    def novoProjeto(self, comboBoxSalvos, spinBoxSalvos):
+    def novoProjeto(self, comboBoxSalvos, spinBoxSalvos, origem):
         self.atualizaTituloPrograma("/*")
         self.nomeProjeto = "UmNomeQueNinguemNuncaVaiEscolher"
         self.trocaTela('fluido1Tela')
+
+        #Troca tela se a origem for a tela principal
+        if origem=='projetoTela':
+                self.fluido1_btn.setEnabled(True)
+                self.fluido2_btn.setEnabled(True)
+                self.trocador_btn.setEnabled(True)
+                self.resultados_btn.setEnabled(True)
 
         for nomeWidget in comboBoxSalvos:
             widget = self.centralwidget.findChild(QtCore.QObject, nomeWidget)
