@@ -1,36 +1,30 @@
 # STC
-
-Simulador de Trocador de Calor
+Simulador de Trocador de Calor (trocador do tipo placas)
 
 ## Getting Started
 
-Software livre para projeto de trocadores de calor de placas (WIP)
+Software livre para projeto de trocadores de calor de placas (Working In Progress)
 
-As instruções vão te permitir ter uma cópia do atual progresso do trabalho e executar o algoritmo para efeitos de desenvolvimento e testes
+
 
 ### Pré-requisitos
 
 <ul>
 <li> Python 3.7 (Testado nessa versão)
-<li> Vem tranquilo
 
 </ul>
-Importando a biblioteca em seu algoritmo
 
-```
-import libSTC
-```
-
-Para executar o algoritmo de testes em sua maquina:
+Para executar o software em sua maquina (versão de desenvolvedor):
 ```
 py main.py
 ```
 
-## Construído com
+## Sustentado com
 
-* [Numpy](https://numpy.org/) - Framework de cálculo baseada
+* [Numpy](https://numpy.org/) - Framework de cálculo numérico
 * [Scipy](https://www.scipy.org/) - Rotinas de tratamento de dados
-* [Pandas](https://pandas.pydata.org/) - Gerenciamento do banco de dados
+* [Pandas](https://pandas.pydata.org/) - Gerenciamento dos bancos de dados
+* [PyQT5](https://pypi.org/project/PyQt5/) - Tela gráfica
 
 ## Autores
 
@@ -44,7 +38,3 @@ py main.py
 Desligados da matrix:
 * **T. Santana** - *eu não sei programar, meu querido* - [Advanced Internship sponsored by Embraer](https://www.udacity.com/course/introduction-to-python--ud1110)
 * **A. Sacramento** - *Amante dos felinos * - [Portfolio](https://digaolanches.com.br/)
-
-## Licença
-
-Este projeto é licenciado sobre a licença VEMTRANQUILO, não plagia, e se plagiar, manda pra gente
