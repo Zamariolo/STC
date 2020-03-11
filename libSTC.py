@@ -240,8 +240,8 @@ def calculaQ(m, cp1, dT1, cp2, dT2):
 	Author: Vinicius
 	'''
 
-    Q1 = m[0]*cp1*dT1
-    Q2 = m[1]*cp2*dT2
+    Q1 = abs(m[0]*cp1*dT1)
+    Q2 = abs(m[1]*cp2*dT2)
 
     if dT1>=0 and dT2>=0:
         print("Erro, ambos os fluidos estão esquentando")
@@ -306,8 +306,8 @@ def ConverterVazão(mod, uni,rho):
 	return vaz
 
 def coef_global(Rcond,h,Rd):
-    U = 1/(Rcond + 1/h[0] + 1/h[1] +Rd)
-    return U
+	U = 1/(Rcond + 1/h[0] + 1/h[1] +Rd)
+	return U
 
 def iteracaoTrocadorPlacas (Npchute,itmax,tolerancia, parametros):
 
@@ -332,7 +332,8 @@ def iteracaoTrocadorPlacas (Npchute,itmax,tolerancia, parametros):
 		
 		if erro<tolerancia:
 			print('tolerancia atingida')
-			break
+			NPnew = math.ceil(NPnew)
+			return NPnew
 
 		Np = NPnew
 		print('NPnew(',abs(200-itmax),') =',NPnew)

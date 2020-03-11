@@ -10,6 +10,14 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from libSTC import *
 from functools import partial
 
+rho1=cp1=kf1=mi1=pr1=42
+rho2=cp2=kf2=mi2=pr2=43
+t1=t2=10
+T1=T2=20
+Rcond=Rd=0
+tolerancia=0.000001
+itmax=200
+
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -2112,14 +2120,36 @@ class Ui_MainWindow(object):
             np=float(self.Np_entry.value())
             vaz1=float(self.f1Flow_entry.value())
             vaz2=float(self.f2Flow_entry.value())
+            mi1 = float(self.f1Mi_spinbox.value())
+            mi2 = float(self.f2Mi_spinBox.value())
+            kf1 = float(self.f1Kf_spinbox.value())
+            kf2 = float(self.f2K_spinBox.value())
+            cp1 = float(self.f1Cp_spinBox.value())
+            cp2 = float(self.f2Cp_spinBox.value())
+            T1 = float(self.f2T1_entry.value())
+            T2 = float(self.f2T2_entry.value())
+            t1 = float(self.f1T1_entry.value())
+            t2 = float(self.f1T2_entry.value())
+
             deq=Diam_Eq(w,e)
+            print('deq: ',deq)
             ap=Area_ap(w,e,np)
+            print("ap:", ap)
             vaz=[vaz1,vaz2]
+            print("vazao: ", vaz)
             mi=[mi1,mi2]
+            print("mi: ", mi)
             kf=[kf1,kf2]
+            print("kf: ", kf)
+            #Calculo de pr a partir de cp, mi, k
+            pr1 = (cp1*mi1)/kf1
+            pr2 = (cp2*mi2)/kf2
             pr=[pr1,pr2]
+            print("pr: ", pr)
             cp=[cp1,cp2]
+            print("cp: ", cp)
             deltatln=dtln(T1,T2,t1,t2)
+            print("deltaln: ", deltatln)
             dt1=t2-t1
             dt2=T2-T1
             print('dt1=',dt1)
@@ -2128,10 +2158,15 @@ class Ui_MainWindow(object):
             calortaxa=calculaQ(vaz,cp[0],dt1,cp[1],dt2) # acho q tem um erro no menorQ
             print('Q=',calortaxa)
             print('Pr=',pr)
+            print("mi1",mi1)
+            print("mi2:",mi2)
             #Rd vai ser tomado como 0 por enquanto (variavel global)
             h=coef_convec(pr,vaz,deq,mi,ap,kf)
+            print("h: ",h)
             #Rcond=k/e
             global Rcond, Rd, itmax, tolerancia
+            Rcond = 0
+            Rd = 0
             Ud=coef_global(Rcond,h,Rd)
             print('Ud=',Ud)
             Area=area_troca_termica(calortaxa[0],Ud,deltatln,L,w)
